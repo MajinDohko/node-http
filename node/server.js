@@ -1,5 +1,5 @@
 //Se importa el módulo y lo que se requiere para que funcione el servidor http
-const http = require('node:http');
+const http = require('http');
 const web = require('./data');
 
 //Creamos el servidor con el .createServer
@@ -28,7 +28,8 @@ const server = http.createServer((req, res)=>{
   res.end(html)
 })
 
-server.listen(0, host, ()=>{
-    console.log(`server listening on http://localhost:${server.address().port}`);
+server.listen(0, ()=>{
+    const port = server.address().port;
+    console.log(`server listening on http://localhost:${port}`);
 })
 
