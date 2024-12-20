@@ -1,5 +1,5 @@
 //Se importa el módulo y lo que se requiere para que funcione el servidor http
-const http = require('http');
+const http = require('node:http');
 const web = require('./data');
 
 //Creamos el servidor con el .createServer
